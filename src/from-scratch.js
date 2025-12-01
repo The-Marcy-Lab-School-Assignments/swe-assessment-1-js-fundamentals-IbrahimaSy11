@@ -76,9 +76,16 @@ function letterCaseCounts(str) {
 // Question 5: getNamesOfGreedyGnomes
 // ============================================
 
-const getNamesOfGreedyGnomes = (gnomes) => {
-  // Your code here
-};
+function getNamesOfGreedyGnomes(gnomes) {
+  if (gnomes.length === 0) {
+    return [];
+  }
+
+  return gnomes
+    .filter(gnome => gnome.stolenDecorations.length > 1)
+    .map(gnome => gnome.name);
+}
+
 
 // ============================================
 // Exports
